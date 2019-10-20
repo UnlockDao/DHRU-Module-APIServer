@@ -7,7 +7,7 @@ function samtool_activate()
 {
     GatewayField('samtool', 'text', 'apikey', '', 'APi KEY', '60', '');
     GatewayField('samtool', 'text', 'username', '', 'Username', '30', '');
-    GatewayField('samtool', 'system', 'apiurl', 'https://api.samtool.org/', 'APi url', '500', '');
+    GatewayField('samtool', 'system', 'apiurl', 'https://samtool.org/', 'APi url', '500', '');
 }
 
 function samtool_accoutinfo($VAL)
