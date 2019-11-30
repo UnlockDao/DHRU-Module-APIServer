@@ -1,19 +1,19 @@
 <?php
 
-$APIMODULE['samtoolname'] = 'samtool';
-$APIMODULE['samtoolvisiblename'] = 'samtool.org';
+$APIMODULE['samtoolname'] = 'SAMTool';
+$APIMODULE['samtoolvisiblename'] = 'Best & Cheapest Tool Remote Unlock Samsung Mobile Phone!';
 $APIMODULE['samtoolnotes'] = '';
 function samtool_activate()
 {
     GatewayField('samtool', 'text', 'apikey', '', 'APi KEY', '60', '');
     GatewayField('samtool', 'text', 'username', '', 'Username', '30', '');
-    GatewayField('samtool', 'system', 'apiurl', 'https://samtool.org/', 'APi url', '500', '');
+    GatewayField('samtool', 'system', 'apiurl', 'https://samtool.org/', 'API URL', '500', '');
 }
 
 function samtool_accoutinfo($VAL)
 {
     include_once ROOTDIR . '/modules/apiserver/class/fusion.class.php';
-    define("REQUESTFORMAT", "JSON"); // we recommend json format (More information http://php.net/manual/en/book.json.php)
+    define("REQUESTFORMAT", "JSON");
     define('DHRUFUSION_URL', $VAL['apiurl']);
     define("USERNAME", $VAL['username']);
     define("API_ACCESS_KEY", $VAL['apikey']);
